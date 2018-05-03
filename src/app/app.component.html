@@ -22,3 +22,5 @@
     <button (click)="finishedEditing()">Done</button>
   </div>
 </div>
+<app-edit-task [childSelectedTask]="selectedTask" (clickedDone)="finishedEditing()"></app-edit-task>
+<app-new-task (sendTask)="addTask($event)"></app-new-task>
