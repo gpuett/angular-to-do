@@ -6,10 +6,8 @@
   <div style="text-align:center">
     <h1>To Do List for {{month}}/{{day}}/{{year}}</h1>
     <h3>{{currentFocus}}</h3>
+    <app-task-list></app-task-list>
   </div>
-  <ul>
-    <li [class]="priorityColor(currentTask)" *ngFor="let currentTask of tasks">{{currentTask.description}} <button class="btn btn-primary" (click)="editTask(currentTask)">Edit!</button></li>
-  </ul>
   <div *ngIf="selectedTask">
     <h3>{{selectedTask.description}}</h3>
     <p>Task Complete? {{selectedTask.done}}</p>
